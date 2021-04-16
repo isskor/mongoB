@@ -49,6 +49,9 @@ const stocks = myDb.model('abc', emptySchema, 'main');
 // const test = test1.model('abc', emptySchema, 'news');
 // // const a = db.collection('2021-04-13');
 // const b = conn.collection('news');
+app.get('/', async (req, res) => {
+  res.json('HELLO');
+});
 app.get('/all', async (req, res) => {
   try {
     //   console.log('1');
