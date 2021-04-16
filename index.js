@@ -3,7 +3,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 require('dotenv').config();
-const apiPort = process.env.PORT;
+const apiPort = process.env.PORT || 8000;
 const mongoUrl = process.env.MONGO_URI;
 
 // middleware
@@ -49,10 +49,10 @@ const stocks = myDb.model('abc', emptySchema, 'main');
 // const test = test1.model('abc', emptySchema, 'news');
 // // const a = db.collection('2021-04-13');
 // const b = conn.collection('news');
-app.get('/', async (req, res) => {
+app.get('/api', async (req, res) => {
   res.json('HELLO');
 });
-app.get('/all', async (req, res) => {
+app.get('/api/all', async (req, res) => {
   try {
     //   console.log('1');
     // const data200 = await data200Plus.find().lean();
