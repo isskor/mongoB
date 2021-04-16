@@ -41,11 +41,11 @@ conn.once('open', () => {
 });
 
 const myDb = conn.useDb('1minData');
-// const test1 = conn.useDb('test');
+// const test1 = conn.useDb('test');-
 
 const emptySchema = mongoose.Schema({});
 
-const stocks = myDb.model('abc', emptySchema, 'main');
+const stocks = myDb.model('abc', emptySchema, '2021-04-16');
 // const test = test1.model('abc', emptySchema, 'news');
 // // const a = db.collection('2021-04-13');
 // const b = conn.collection('news');
